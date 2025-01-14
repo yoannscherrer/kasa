@@ -1,0 +1,55 @@
+@use 'variables' as *;
+
+body {
+  font-family: $font-family;
+  margin-top: $top-gap;
+}
+
+.kasa-banner {
+  max-width: $banner-max-width;
+  width: 100%;
+  height: $banner-height;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 $padding-horizontal;
+  box-sizing: border-box;
+
+  nav {
+    display: flex;
+
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-left: $gap-between-items;
+
+        a {
+          display: flex;
+          align-items: center;
+          text-decoration: none;
+          color: $primary-color;
+          font-weight: $font-weight;
+          font-size: $font-size;
+
+          &:hover {
+            text-decoration: underline;
+          }
+
+          &.active {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+section {
+  margin-top: $gap-between-sections;
+}
