@@ -1,0 +1,30 @@
+@use 'variables' as *;
+
+.kasa-footer {
+    background-color: $primary-color;
+    height: $footer-height;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+
+    .kasa-logo-footer {
+        position: absolute;
+        top: 66px; 
+        width: $footer-logo-width;
+        height: $footer-logo-height;
+    }
+
+    .kasa-footer-text {
+        position: absolute;
+        top: 134px; 
+        font-family: $font-family;
+        font-weight: $font-weight;
+        font-size: $font-size;
+        line-height: 34.22px;
+        color: white;
+        text-align: center;
+    }
+}
