@@ -4,6 +4,9 @@ body {
   font-family: $font-family;
   margin-top: $top-gap;
 }
+.active {
+  text-decoration: underline;
+}
 
 .kasa-banner {
   max-width: $banner-max-width;
@@ -37,9 +40,9 @@ body {
           font-weight: $font-weight;
           font-size: $font-size;
 
-          &:hover {
+          /*&:hover {
             text-decoration: underline;
-          }
+          }*/
 
           &.active {
             text-decoration: underline;

@@ -1,0 +1,39 @@
+@use 'variables' as *;
+
+.error-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    background-color: #ffffff;
+
+    h1 {
+        font-size: 288px;
+        font-weight: $font-weight2;
+        color: #ff6060;
+        margin: 0;
+        line-height: 410.69px;
+        margin-top: 139px;
+    }
+
+    p {
+        font-size: 36px;
+        font-weight: $font-weight;
+        color: #ff6060;
+        margin-top: 139px; 
+        margin-bottom: 0;
+    }
+
+    .back-home {
+        font-family: $font-family;
+        font-weight: $font-weight;
+        font-size: 18px;
+        color: $primary-color;
+        text-decoration: underline;
+        transition: color 0.3s;
+        margin-top: 139px; 
+        margin-bottom: 89px;
+    }
+}
