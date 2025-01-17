@@ -4,9 +4,7 @@ import "../styles/apropos.scss";
 function Apropos() {
     return (
       <div className="collapse-parent">
-        <section className="first-image">
-
-        </section>
+        <section className="first-image"></section>
         <section>
           <Collapse title="Fiabilité">
             <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.</p>

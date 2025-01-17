@@ -1,0 +1,155 @@
+@use 'variables' as *;
+
+.logement {
+    display: flex;
+    flex-direction: column;
+    max-width: 1240px;
+    margin: 0 auto; /* Centrer horizontalement */
+    padding: 20px; /* Un peu d'espace autour du contenu */
+}
+
+.info-logement {
+    display: flex;
+    justify-content: space-between; /* Sépare les éléments entre les extrémités */
+    align-items: center; /* Centre les éléments verticalement */
+    width: 100%;
+    margin-top: -15px;
+}
+
+.info-logement h1 {
+    flex: 1; /* Le titre prend tout l'espace à gauche */
+    font-size: 36px; /* Ajuste la taille du titre */
+    font-family: $font-family;
+    font-weight: $font-weight;
+    color: #ff6060;
+}
+
+.host-info {
+    display: flex;
+    align-items: center; /* Centre l'image et le nom verticalement */
+    gap: 10px; /* Espace entre le nom et la photo */
+}
+
+.host-name {
+    display: flex;
+    flex-direction: column; /* Aligne prénom et nom sur deux lignes */
+    align-items: flex-end; /* Aligne à droite */
+}
+
+.host-name p {
+    margin: 2px; /* Évite des marges inutiles entre les paragraphes */
+    font-size: 18px;
+    font-weight: $font-weight;
+    color: #ff6060;
+}
+
+.host-info img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%; /* Donne une forme ronde à l'image de l'hôte */
+}
+
+#logement-location {
+    margin-top: -20px;
+}
+
+/* Nouveau conteneur pour les tags et les étoiles */
+.top-info {
+    display: flex;
+    justify-content: space-between; /* Espace entre les tags et les étoiles */
+    align-items: center;
+    width: 100%;
+    margin-top: 0px; /* Espacement */
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 0;
+    justify-content: flex-start; /* Aligne les tags à gauche */
+}
+
+.tag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ff6060;
+    color: #ffffff;
+    min-width: 95px;
+    height: 25px;
+    font-family: $font-family;
+    font-size: 14px;
+    font-weight: $font-weight2;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Pour les étoiles */
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end; /* Aligner les étoiles à droite */
+    width: 200px; /* Ajuster la largeur si nécessaire */
+}
+
+.rating img {
+    width: 24.75px;
+    height: 24px;
+}
+
+.logement-collapses {
+    display: flex;
+    align-items: stretch;
+    gap: 76px;
+    width: 100%;
+    justify-content: center; /* Centrer les collapses */
+    margin-top: 0px;
+    margin-bottom: -50px; /* Réduit l'espacement avec le footer */
+}
+
+.logement .collapse {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+    border-radius: 10px;
+    overflow: hidden; /* S'assure que tout débordement est masqué */
+}
+
+.logement .collapse-header {
+    background-color: #ff6060;
+    color: white;
+    height: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.logement .collapse-title {
+    font-size: 18px;
+}
+
+.logement .collapse-content {
+    background-color: #f6f6f6;
+    //padding: 20px;
+    line-height: 1.5;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Centre verticalement */
+    align-items: flex-start; /* Aligne à gauche horizontalement */
+    font-size: 18px;
+    font-family: $font-family;
+    font-weight: $font-weight;
+    overflow-y: auto; /* Permet de défiler si nécessaire */
+}
+
+/* Enlever les puces dans la liste des équipements */
+.logement .collapse-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}

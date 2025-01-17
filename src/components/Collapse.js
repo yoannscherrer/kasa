@@ -22,3 +22,4 @@ function Collapse({ title, children }) {
 }
 
 export default Collapse;
+
