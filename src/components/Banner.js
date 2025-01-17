@@ -1,14 +1,23 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import '../styles/banner.scss';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/logo.png';
 
 function Banner() {
+    const location = useLocation(); 
     const [activeLink, setActiveLink] = useState(null);
 
-    const handleLinkClick = (linkName) => {
-        setActiveLink(linkName);
-    };
+    useEffect(() => {
+        const pathname = location.pathname;
+
+        if (pathname.startsWith('/logement') || pathname === '/404') {
+            setActiveLink(null);
+        } else if (pathname === '/') {
+            setActiveLink('home');
+        } else if (pathname === '/a-propos') {
+            setActiveLink('about');
+        }
+    }, [location.pathname]);
 
     return (
         <div className="kasa-banner">
@@ -19,7 +28,7 @@ function Banner() {
                         <Link
                             to="/"
                             className={activeLink === 'home' ? 'active' : ''}
-                            onClick={() => handleLinkClick('home')}
+                            onClick={() => setActiveLink('home')}
                         >
                             Accueil
                         </Link>
@@ -28,7 +37,7 @@ function Banner() {
                         <Link
                             to="/a-propos"
                             className={activeLink === 'about' ? 'active' : ''}
-                            onClick={() => handleLinkClick('about')}
+                            onClick={() => setActiveLink('about')}
                         >
                             A Propos
                         </Link>

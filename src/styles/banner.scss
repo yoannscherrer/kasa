@@ -4,6 +4,9 @@ body {
   font-family: $font-family;
   margin-top: $top-gap;
 }
+.active {
+  text-decoration: underline;
+}
 
 .kasa-banner {
   max-width: $banner-max-width;
