@@ -25,23 +25,24 @@ function Logement() {
             <div className="logement">
                 <div className="info-logement"> 
                     <h1>{logement.title}</h1>
-                    <div className="host-info">
+                    <p id="logement-location">{logement.location}</p> 
+                    <div className="tags-container">
+                      {logement.tags.map((tag, index) => (
+                          <span key={index} className="tag">
+                              {tag}
+                          </span>
+                      ))}
+                    </div>
+                    
+                </div> 
+                <div className="top-info">
+                  <div className="host-info">
                         <div className="host-name">
                             <p>{firstName}</p> {/* Affichage du prénom */}
                             <p>{lastName}</p>  {/* Affichage du nom */}
                         </div>
                         <img src={logement.host.picture} alt="host_picture" />
                     </div>
-                </div>
-                <p id="logement-location">{logement.location}</p>  
-                <div className="top-info">
-                  <div className="tags-container">
-                      {logement.tags.map((tag, index) => (
-                          <span key={index} className="tag">
-                              {tag}
-                          </span>
-                      ))}
-                  </div>
                   <div className="rating">
                       {Array(5)
                           .fill(null)
@@ -55,7 +56,9 @@ function Logement() {
                           ))}
                   </div>
                 </div>
-                <div className="logement-collapses">
+                
+            </div>
+            <div className="logement-collapses">
                     <Collapse title="Description">
                         <p>{logement.description}</p>
                     </Collapse>
@@ -66,7 +69,6 @@ function Logement() {
                             ))}
                         </ul>
                     </Collapse>
-                </div>
             </div>
             {/* Ajoutez les autres détails du logement */}
         </div>

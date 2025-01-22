@@ -4,6 +4,7 @@ body {
   font-family: $font-family;
   margin-top: $top-gap;
 }
+
 .active {
   text-decoration: underline;
 }
@@ -25,12 +26,17 @@ body {
     ul {
       display: flex;
       justify-content: flex-end;
+      align-items: center;
       list-style-type: none;
       margin: 0;
       padding: 0;
 
       li {
-        margin-left: $gap-between-items;
+        margin-left: $gap-between-items; 
+
+        &:last-child {
+          margin-right: 10px;
+        }
 
         a {
           display: flex;
@@ -39,10 +45,7 @@ body {
           color: $primary-color;
           font-weight: $font-weight;
           font-size: $font-size;
-
-          /*&:hover {
-            text-decoration: underline;
-          }*/
+          white-space: nowrap;
 
           &.active {
             text-decoration: underline;
@@ -55,4 +58,29 @@ body {
 
 section {
   margin-top: $gap-between-sections;
+}
+
+@media screen and (max-width: 768px) {
+  .kasa-banner {
+    max-width: 375px;
+    padding: 0 20px;
+
+    nav ul {
+      gap: 16px;
+
+      li {
+        margin-left: 0;
+      }
+
+      li a {
+        font-size: 12px;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .kasa-logo {
+    width: 145px;
+    height: 46.88px;
+  }
 }

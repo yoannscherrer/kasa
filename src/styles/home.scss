@@ -26,7 +26,7 @@
     font-weight: $font-weight2;
     font-size: 48px;
     color: white;
-    text-align: center;
+    text-align: center; /* Par défaut, centré */
     position: relative;
     z-index: 1;
     text-shadow: 
@@ -52,4 +52,31 @@
     justify-content: center; 
 }
 
+@media screen and (max-width: 768px) {
+    .first-section {
+        width: 335px;
+        height: 111px;
+        margin-top: 17px;
+        margin-bottom: 27px;
+    }
 
+    .first-section-text {
+        width: auto;
+        font-size: 24px;
+        text-align: left; 
+        padding-left: 16px; 
+    }
+
+    .second-section {
+        background-color: white;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .card-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 27px;
+    }
+}
