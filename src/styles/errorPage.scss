@@ -24,6 +24,11 @@
         color: #ff6060;
         margin-top: 139px; 
         margin-bottom: 0;
+
+        span {
+            display: inline-block; 
+            white-space: nowrap; 
+        }
     }
 
     .back-home {
@@ -35,5 +40,34 @@
         transition: color 0.3s;
         margin-top: 139px; 
         margin-bottom: 89px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .error-page {
+
+        h1 {
+            font-size: 96px;
+            line-height: normal;
+            margin-top: 113px;
+        }
+
+        p {
+            width: 260px; 
+            font-size: 18px;
+            margin-top: 113px;
+            text-align: center;
+            line-height: 1.5;
+
+            span {
+                display: inline; 
+                white-space: nowrap; 
+            }
+        }
+
+        .back-home {
+            font-size: 14px;
+            margin-top: 113px;
+        }
     }
 }
