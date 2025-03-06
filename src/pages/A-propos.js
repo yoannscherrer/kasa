@@ -1,4 +1,4 @@
-import Collapse from "./Collapse";
+import Collapse from "../components/Collapse";
 import "../styles/apropos.scss";
 
 function Apropos() {

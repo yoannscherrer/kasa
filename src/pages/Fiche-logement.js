@@ -1,20 +1,15 @@
 import { useParams, useNavigate } from "react-router-dom";
 import logements from "../logements.json";
-import Carousel from "./Carroussel";
-import Collapse from "./Collapse";
+import Carousel from "../components/Carroussel";
+import Collapse from "../components/Collapse";
 import "../styles/logement.scss";
 import etoilePleine from "../assets/etoile_pleine.png";
 import etoileVide from "../assets/etoile_vide.png";
 
 function Logement() {
     const { id } = useParams();
-    const navigate = useNavigate();
     const logement = logements.find((item) => item.id === id);
     
-    if (!logement) {
-        navigate("/error");
-        return null;
-    }
 
     // Séparation du nom complet en prénom et nom
     const [firstName, lastName] = logement.host.name.split(' ');
@@ -70,7 +65,6 @@ function Logement() {
                         </ul>
                     </Collapse>
             </div>
-            {/* Ajoutez les autres détails du logement */}
         </div>
     );
 }
