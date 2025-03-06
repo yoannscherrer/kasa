@@ -1,9 +1,9 @@
 import { Navigate, BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Layout from "./components/Layout";
-import Home from "./components/Home";
-import Apropos from "./components/A-propos";
-import Error404 from "./components/Error_404";
-import Logement from "./components/Fiche-logement";
+import Home from "./pages/Home";
+import Apropos from "./pages/A-propos";
+import Error404 from "./pages/Error_404";
+import Logement from "./pages/Fiche-logement";
 import RouteValidator from "./components/RouteValidator";
 import logements from "./logements.json";
 
