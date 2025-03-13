@@ -1,10 +1,14 @@
 import Collapse from "../components/Collapse";
 import "../styles/apropos.scss";
+import Banner from "../components/Banner";
+import aproposBanner from "../assets/apropos_banner.png";
 
 function Apropos() {
     return (
       <div className="collapse-parent">
-        <section className="first-image"></section>
+        <section className="firstsection">
+          <Banner image={aproposBanner} opacity={0.3}/>
+        </section>
         <section>
           <Collapse title="Fiabilité">
             <p>Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.</p>

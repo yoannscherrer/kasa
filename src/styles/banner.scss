@@ -1,86 +1,50 @@
 @use 'variables' as *;
 
-body {
-  font-family: $font-family;
-  margin-top: $top-gap;
-}
-
-.active {
-  text-decoration: underline;
-}
-
-.kasa-banner {
-  max-width: $banner-max-width;
-  width: 100%;
-  height: $banner-height;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  padding: 0 $padding-horizontal;
-  box-sizing: border-box;
-
-  nav {
+.banner-section {
+    width: 100%;
+    height: 100%; 
+    background-size: cover;
+    background-position: center;
     display: flex;
-
-    ul {
-      display: flex;
-      justify-content: flex-end;
-      align-items: center;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-
-      li {
-        margin-left: $gap-between-items; 
-
-        &:last-child {
-          margin-right: 10px;
-        }
-
-        a {
-          display: flex;
-          align-items: center;
-          text-decoration: none;
-          color: $primary-color;
-          font-weight: $font-weight;
-          font-size: $font-size;
-          white-space: nowrap;
-
-          &.active {
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-  }
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-section {
-  margin-top: $gap-between-sections;
+.banner-text {
+    font-size: 48px;
+    color: white;
+    font-weight: 700;
+    text-shadow: 
+        -1px -1px 0 black,  
+         1px -1px 0 black,
+        -1px  1px 0 black,
+         1px  1px 0 black;
+    z-index: 1;
+}
+
+.banner-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black; // Ou une autre couleur selon le design
 }
 
 @media screen and (max-width: 768px) {
-  .kasa-banner {
-    max-width: 375px;
-    padding: 0 20px;
+.banner-text {
+    font-size: 24px;
+    width: 225px;
+    position: relative;
+    left: -36px;
+}
 
-    nav ul {
-      gap: 16px;
+.banner-section {
+    border-radius: 10px;
+}
 
-      li {
-        margin-left: 0;
-      }
-
-      li a {
-        font-size: 12px;
-        white-space: nowrap;
-      }
-    }
-  }
-
-  .kasa-logo {
-    width: 145px;
-    height: 46.88px;
-  }
 }
