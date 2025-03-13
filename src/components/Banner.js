@@ -1,32 +1,17 @@
-import { useEffect, useState } from 'react';
-import '../styles/banner.scss';
-import { NavLink } from 'react-router-dom';
-import logo from '../assets/logo.png';
+import "../styles/banner.scss"; 
 
-function Banner() {
-    
+function Banner({ image, text, opacity }) {
     return (
-        <div className="kasa-banner">
-            <img src={logo} alt="Kasa" className="kasa-logo" />
-            <nav>
-                <ul>
-                    <li>
-                        <NavLink
-                            to="/"
-                        >
-                            Accueil
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink
-                            to="/a-propos"
-                        >
-                            A Propos
-                        </NavLink>
-                    </li>
-                </ul>
-            </nav>
-        </div>
+        <section 
+            className="banner-section"
+            style={{ backgroundImage: `url(${image})` }}
+        >
+            <div 
+                className="banner-overlay" 
+                style={{ opacity: opacity }}
+            ></div>
+            {text && <p className="banner-text">{text}</p>}
+        </section>
     );
 }
 

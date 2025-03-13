@@ -1,4 +1,4 @@
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams} from "react-router-dom";
 import logements from "../logements.json";
 import Carousel from "../components/Carroussel";
 import Collapse from "../components/Collapse";

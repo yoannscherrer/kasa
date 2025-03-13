@@ -7,19 +7,19 @@ function Collapse({ title, children }) {
 
   return (
     <div className="collapse">
-      <div className="collapse-header">
+      <div className="collapse-header" onClick={() => setIsOpen(!isOpen)}>
         <span className="collapse-title">{title}</span>
         <img
           src={arrow}
           alt="Toggle Collapse"
           className={`collapse-arrow ${isOpen ? "open" : ""}`}
-          onClick={() => setIsOpen(!isOpen)}
         />
       </div>
-      {isOpen && <div className="collapse-content">{children}</div>}
+      <div className={`collapse-content ${isOpen ? "open" : ""}`}>
+        {children}
+      </div>
     </div>
   );
 }
 
 export default Collapse;
-
